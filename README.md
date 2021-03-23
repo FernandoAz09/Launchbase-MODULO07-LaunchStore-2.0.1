@@ -1,6 +1,6 @@
  <p align="center"> <img src="https://camo.githubusercontent.com/047366567218e6f144fb666cf9d0d1c2f34dc5a6e6af816aeead27d9f1e8350f/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f676f6c64656e2d77696e642f626f6f7463616d702d6c61756e6368626173652f6c6f676f2e706e67"></p>
 
-  <h1 align="center">  LaunchStore 2.0 (CADASTRO DE USUÁRIOS)  </h1>
+  <h1 align="center">  LaunchStore 2.0.1 (SESSÃO DE USUÁRIOS)  </h1>
 
   <p align="center">Projeto desenvolvido durante o bootcamp LaunchBase da <a href="https://www.rocketseat.com.br" target="_blank">Rocketseat</a>. </p>
 
@@ -41,6 +41,8 @@
 
 - ✔️ Banco de dados PostegreSQL.
 
+- ✔️ Sessão de usuários com o Express-Session.
+
 <hr>
 
 ## Tecnologias<a name="tecnologias"></a>
@@ -61,6 +63,9 @@
 - <a href="https://www.npmjs.com/package/npm-run-all">Npm-run-all</a>
 - <a href="https://www.npmjs.com/package/method-override">MethodOverride</a>
 - <a href="https://www.npmjs.com/package/multer">Multer</a>
+- <a href="https://www.npmjs.com/package/express-session">Express-Session</a>
+- <a href="https://www.npmjs.com/package/connect-pg-simple">Connect-PG-Simple</a>
+
 
 
 
