@@ -13,7 +13,7 @@ routes.get('/', HomeController.index)
 
 // USERS.JS (arquivo separado para melhor visualização)
 
-routes.use('/user', users)
+routes.use('/users', users)
  
 // ALIAS
 routes.get('/ads/create', (req, res) => { 
@@ -21,7 +21,7 @@ routes.get('/ads/create', (req, res) => {
 })
 
 routes.get('/accounts', (req, res) => { 
-    return res.redirect("/user/register")
+    return res.redirect("/users/register")
 })
 
 

@@ -31,6 +31,35 @@
         style:'currency',
         currency:'BRL'
         }).format(price/100)
+    },
+    formaCpfCnpj(value) {
+        let error = null
+
+        const cleanValues = value.replace(/\D/g, "")
+
+        if (cleanValues.length > 11 && cleanValues.length !== 14) {
+            error = "CNPJ incorreto"
+        } else if (cleanValues.length < 12 && cleanValues.length !== 11) {
+            error = "CPF incorreto"
+        }
+        return {
+            error,
+            value
+        }
+
+    },
+    formaCep(value) {
+        let error = null
+
+        const cleanValues = value.replace(/\D/g, "")
+
+        if (cleanValues.length !== 8) {
+            error = "CEP incorreto"
+        } 
+        return {
+            error,
+            value
+        }
     }
 }
 
