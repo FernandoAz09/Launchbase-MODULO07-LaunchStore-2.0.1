@@ -32,34 +32,40 @@
         currency:'BRL'
         }).format(price/100)
     },
-    formaCpfCnpj(value) {
-        let error = null
+    formatCpfCnpj(value) {
+        value = value.replace(/\D/g,"") 
 
-        const cleanValues = value.replace(/\D/g, "")
+        if (value.length > 14) value = value.slice(0, -1)
+        // CNPJ - 11.222.333/0001-11
+        if (value.length > 11) {
+            value = value.replace(/(\d{2})(\d)/, "$1.$2")
+            value = value.replace(/(\d{3})(\d)/, "$1.$2")
+            value = value.replace(/(\d{3})(\d)/, "$1/$2")
+            value = value.replace(/(\d{4})(\d)/, "$1-$2")
 
-        if (cleanValues.length > 11 && cleanValues.length !== 14) {
-            error = "CNPJ incorreto"
-        } else if (cleanValues.length < 12 && cleanValues.length !== 11) {
-            error = "CPF incorreto"
+
+        }else {
+        //CPF - 111.222.333-44
+            value = value.replace(/(\d{3})(\d)/, "$1.$2")
+            value = value.replace(/(\d{3})(\d)/, "$1.$2")
+            value = value.replace(/(\d{3})(\d)/, "$1-$2")
+
+
         }
-        return {
-            error,
-            value
-        }
+        return value
 
     },
-    formaCep(value) {
-        let error = null
+    formatCep(value) {
+        value = value.replace(/\D/g, "")
 
-        const cleanValues = value.replace(/\D/g, "")
-
-        if (cleanValues.length !== 8) {
-            error = "CEP incorreto"
-        } 
-        return {
-            error,
-            value
+        if (value.length > 8) {
+            value = value.slice(0, -1)
         }
+
+        value = value.replace(/(\d{5})(\d)/, "$1-$2")
+
+        return value
+
     }
 }
 
