@@ -10,6 +10,11 @@ const server = express() // criando um servidor, executando o express como funç
 //USE = middleware
 
 server.use(session)
+server.use((req, res, next) => {
+    res.locals.session = req. session
+    next()
+})
+
 server.use(express.urlencoded({ extended: true })) // ojeto + propriendade responsáveis pelo funcionamento do req.body do routes
 server.use(express.static('public')) // express observando a pasta "public", para servir o arquivos estáticos
 server.use(methodOverride('_method')) // Sobreescrever o tipo do método usado // Vindo antes da rota para funcionar
