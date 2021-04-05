@@ -1,4 +1,3 @@
-
 const User = require("../models/User")
 const { compare } = require("bcryptjs")
 
@@ -53,7 +52,7 @@ async function post(req, res, next) {
     if (password != passwordRepeat) {
         return res.render("user/register", {
             user: req.body,
-            error: "Senhas não conferem",
+            error: "As senhas estão diferentes, digite a mesma senha para continuar",
         })
     }
 
