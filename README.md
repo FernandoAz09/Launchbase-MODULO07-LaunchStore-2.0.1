@@ -65,6 +65,7 @@
 - <a href="https://www.npmjs.com/package/multer">Multer</a>
 - <a href="https://www.npmjs.com/package/express-session">Express-Session</a>
 - <a href="https://www.npmjs.com/package/connect-pg-simple">Connect-PG-Simple</a>
+- <a href="https://www.npmjs.com/package/nodemailer">NODEMAILER</a>
 
 
 
